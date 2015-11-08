@@ -1,12 +1,8 @@
 package com.sim.intersections;
 
 
-import java.util.*;
-
-import com.sim.geometries.Vector23f;
 import com.sim.gui.handler.GUIHandler;
 import com.sim.io.exporters.IntersectionExporter;
-import com.sim.roads.Road;
 
 
 public abstract class Intersection implements Cloneable{

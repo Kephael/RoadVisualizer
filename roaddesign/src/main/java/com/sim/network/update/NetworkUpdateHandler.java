@@ -1,9 +1,7 @@
 package com.sim.network.update;
 
 
-import java.util.*;
-
-import com.sim.network.*;
+import com.sim.network.RoadNetwork;
 
 public abstract class NetworkUpdateHandler {
 	public static final int FAIL = -1;

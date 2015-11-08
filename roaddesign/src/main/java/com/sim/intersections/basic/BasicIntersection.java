@@ -1,25 +1,10 @@
 package com.sim.intersections.basic;
 
-import java.awt.Dimension;
-
-
-
-import java.awt.Graphics;
-import java.awt.Toolkit;
-import java.util.*;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.NavigableMap;
 
 import com.sim.central.RoadDesign;
 import com.sim.core.basic.DesignConsts;
-import com.sim.core.basic.IntersectionCalcError;
-import com.sim.core.basic.ModelGenConsts;
-import com.sim.curves.ThreeCenteredCurve;
-import com.sim.curves.ThreeCenteredTurnConsts;
-import com.sim.debug.DebugView;
-import com.sim.debug.components.DebugPoint;
-import com.sim.debug.components.DebugPolyLine;
 import com.sim.geometries.RoadVector;
 import com.sim.geometries.Vector23f;
 import com.sim.gui.handler.BasicIntersectionGUIHandler;
@@ -27,11 +12,7 @@ import com.sim.intersections.Intersection;
 import com.sim.io.exporters.basic.BasicIntersectionExporter;
 import com.sim.network.RoadNetwork;
 import com.sim.obj.CrossSection;
-import com.sim.roads.Road;
 import com.sim.roads.basic.BasicRoad;
-import com.sim.util.CompareUtil;
-import com.sim.util.CopyUtil;
-import com.sim.util.GraphicsUtil;
 import com.sim.util.ModelGenUtil;
 
 

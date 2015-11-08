@@ -1,16 +1,13 @@
 package com.sim.network;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-import java.io.OutputStream;
-
-import java.util.*;
-
-import com.sim.geometries.*;
-import com.sim.intersections.*;
+import com.sim.intersections.Intersection;
 import com.sim.intersections.basic.BasicIntersection;
 import com.sim.io.exporters.NetworkExporter;
-import com.sim.roads.*;
+import com.sim.roads.Road;
 import com.sim.terrain.Terrain;
 import com.sim.terrain.basic.BasicTerrain;
 

@@ -1,8 +1,10 @@
 package com.sim.util;
 
-import java.util.*;
+import java.util.ArrayList;
 
-import com.sim.geometries.*;
+import com.sim.geometries.Circle2f;
+import com.sim.geometries.RoadVector;
+import com.sim.geometries.Vector23f;
 
 
 public class ModelGenUtil {

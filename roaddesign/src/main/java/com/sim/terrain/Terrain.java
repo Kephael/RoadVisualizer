@@ -1,8 +1,9 @@
 package com.sim.terrain;
 
 import java.util.ArrayList;
+
 import com.sim.geometries.RoadVector;
-import com.sim.gui.handler.*;
+import com.sim.gui.handler.GUIHandler;
 import com.sim.io.exporters.TerrainExporter;
 import com.sim.network.RoadNetwork;
 

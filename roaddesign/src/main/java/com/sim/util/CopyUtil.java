@@ -1,9 +1,7 @@
 package com.sim.util;
 
 
-import java.util.*;
-
-import com.sim.geometries.*;
+import java.util.ArrayList;
 
 
 public class CopyUtil {

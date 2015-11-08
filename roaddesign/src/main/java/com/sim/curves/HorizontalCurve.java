@@ -1,7 +1,6 @@
 package com.sim.curves;
 
 import com.sim.geometries.RoadVector;
-import com.sim.geometries.Vector23f;
 
 /**
  * Encapsulates parameters for a horizontal curve.

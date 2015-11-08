@@ -1,8 +1,6 @@
 package com.sim.network.update;
 
 import com.sim.geometries.Vector23f;
-import com.sim.network.RoadNetwork;
-import com.sim.roads.Road;
 
 
 public class RoadCloseUpdate extends NetworkUpdate{

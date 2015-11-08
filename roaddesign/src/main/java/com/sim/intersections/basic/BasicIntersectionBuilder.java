@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
-import com.sim.core.basic.DesignConsts;
 import com.sim.core.basic.IntersectionCalcError;
 import com.sim.curves.ThreeCenteredCurve;
 import com.sim.curves.ThreeCenteredTurnConsts;
@@ -19,7 +18,6 @@ import com.sim.obj.CrossSection;
 import com.sim.roads.Road;
 import com.sim.roads.basic.BasicRoad;
 import com.sim.util.CopyUtil;
-import com.sim.util.ModelGenUtil;
 import com.sim.util.TriangulatorAdapter;
 
 

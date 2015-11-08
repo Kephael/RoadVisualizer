@@ -2,7 +2,6 @@ package com.sim.terrain.basic;
 
 import java.util.ArrayList;
 
-import com.sim.central.Logging;
 import com.sim.geometries.RoadVector;
 import com.sim.network.RoadNetwork;
 import com.sim.terrain.TerrainBuilder;

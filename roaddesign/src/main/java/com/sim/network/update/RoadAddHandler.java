@@ -1,14 +1,9 @@
 package com.sim.network.update;
 
-import java.util.ArrayList;
-
-import javax.swing.JOptionPane;
-
 import com.sim.central.RoadDesign;
 import com.sim.geometries.RoadVector;
 import com.sim.intersections.basic.BasicIntersection;
 import com.sim.network.RoadNetwork;
-import com.sim.obj.CrossSection;
 import com.sim.roads.Road;
 import com.sim.roads.RoadTypes;
 import com.sim.roads.basic.BasicRoad;

@@ -1,8 +1,7 @@
 package com.sim.obj;
 
 import java.io.File;
-
-import java.util.*;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,17 +12,13 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.sim.core.basic.DesignConsts;
-import com.sim.core.basic.ModelGenConsts;
 import com.sim.core.basic.RoadShapeCalc;
 import com.sim.geometries.RoadVector;
-import com.sim.util.CollectionUtil;
 
 
 

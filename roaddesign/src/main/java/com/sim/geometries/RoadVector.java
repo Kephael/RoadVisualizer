@@ -4,7 +4,6 @@ import com.sim.core.basic.FlagUtil;
 import com.sim.core.basic.ModelGenConsts;
 import com.sim.curves.HorizontalCurve;
 import com.sim.curves.VerticalCurve;
-import com.sim.intersections.basic.BasicIntersection;
 import com.sim.util.Duplicatable;
 
 

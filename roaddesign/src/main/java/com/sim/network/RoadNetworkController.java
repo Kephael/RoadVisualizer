@@ -2,7 +2,9 @@ package com.sim.network;
 
 import java.awt.Graphics;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 import com.sim.central.Logging;
 import com.sim.central.RoadDesign;
@@ -12,7 +14,11 @@ import com.sim.gui.ViewMode;
 import com.sim.gui.handler.NetworkGUIDrawer;
 import com.sim.io.exporters.NetworkExporter;
 import com.sim.io.exporters.basic.BasicNetworkExporter;
-import com.sim.network.update.*;
+import com.sim.network.update.NetworkUpdate;
+import com.sim.network.update.NetworkUpdateHandler;
+import com.sim.network.update.NetworkUpdateType;
+import com.sim.network.update.RoadAddHandler;
+import com.sim.network.update.RoadCloseHandler;
 import com.sim.roads.Road;
 
 

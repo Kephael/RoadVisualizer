@@ -3,14 +3,12 @@ package com.sim.random;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
- 
+
 import com.jme.app.SimpleGame;
 import com.jme.bounding.BoundingBox;
-import com.jme.image.Image;
 import com.jme.image.Texture;
 import com.jme.math.Vector3f;
 import com.jme.scene.state.TextureState;

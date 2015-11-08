@@ -6,7 +6,6 @@ import java.util.Collections;
 import com.sim.core.basic.DesignConsts;
 import com.sim.core.basic.RoadShapeCalc;
 import com.sim.geometries.RoadVector;
-import com.sim.obj.CrossSection;
 import com.sim.roads.basic.BasicRoad;
 
 

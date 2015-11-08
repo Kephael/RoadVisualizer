@@ -1,7 +1,8 @@
 package com.sim.random;
 
-import java.io.*;
-import java.util.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class PropertiesTest {
 	public static void main(String args[]){

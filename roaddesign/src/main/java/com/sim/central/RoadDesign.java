@@ -3,63 +3,28 @@ package com.sim.central;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Point;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelListener;
 import java.awt.geom.Point2D;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.EventListener;
-import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Stack;
 
-import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JComponent;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JToolBar;
-import javax.swing.KeyStroke;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.border.EtchedBorder;
-
 
 import com.jme.app.AbstractGame.ConfigShowMode;
-import com.sim.core.basic.DesignConsts;
-import com.sim.core.basic.FlagUtil;
-import com.sim.core.basic.ModelGenConsts;
-import com.sim.core.basic.RoadShapeCalc;
 import com.sim.curves.CurveParam;
-import com.sim.debug.Debug;
-import com.sim.debug.DebugView;
-import com.sim.debug.components.DebugMesh;
-import com.sim.debug.components.DebugPolyLine;
 import com.sim.geometries.RoadVector;
 import com.sim.geometries.Vector23f;
 import com.sim.gui.FrameComponents;
@@ -69,22 +34,15 @@ import com.sim.gui.JXsecChooser;
 import com.sim.gui.ThreeDEnv;
 import com.sim.gui.ViewMode;
 import com.sim.gui.WorkMode;
-import com.sim.gui.handler.NetworkGUIDrawer;
-import com.sim.intersections.Intersection;
 import com.sim.intersections.IntersectionBuilder;
-import com.sim.intersections.basic.BasicIntersection;
 import com.sim.network.RoadNetwork;
 import com.sim.network.RoadNetworkController;
 import com.sim.network.update.NetworkUpdate;
 import com.sim.obj.CrossSection;
-import com.sim.random.RoadUtil;
 import com.sim.renderer.AutoGenLoader;
-import com.sim.roads.Road;
 import com.sim.roads.RoadBuilder;
-import com.sim.roads.basic.BasicRoad;
-import com.sim.terrain.*;
+import com.sim.terrain.TerrainBuilder;
 import com.sim.util.ArgumentList;
-import com.sim.util.ModelExporterUtils;
 
 /**
  * This class centralizes the communication in the road design process. It mainly
@@ -122,17 +80,17 @@ public class RoadDesign {
 	public static boolean DEBUG = false;
 	
 	/**
-	 * Title of the application window
+	 * Title of the application window.
 	 */
 	public static final String TITLE = "title";
 	
 	/**
-	 * Path to file which stores the texture information for meshes
+	 * Path to file which stores the texture information for meshes.
 	 */
 	public static final String TEXTURE_DIRECTORY = "texture_directory";
 	
 	/**
-	 * Directory to where texture files are saved
+	 * Directory to where texture files are saved.
 	 */
 	public static final String TEXTURE_DIR = "texture_dir";
 	
@@ -143,13 +101,13 @@ public class RoadDesign {
 	public static final String MODEL_PATH = "model_path";
 	
 	/**
-	 * How the real size of the network compares what it shows 
+	 * How the real size of the network compares to what is shown 
 	 * on the design panel.
 	 */
 	public static final String INIT_SCALE = "init_scale";
 	
 	/**
-	 * In {@link #MODEL_DIR MODEL_DIR}, there should exists a file which
+	 * In {@link #MODEL_DIR MODEL_DIR}, there should exist a file which
 	 * records all the files in MODEL_DIR.
 	 */
 	public static final String MODEL_DIR = "model_dir";
@@ -160,22 +118,22 @@ public class RoadDesign {
 	public static final String START_VIEW_PATH = "start_view";
 	
 	/**
-	 * Filename for the heightmap
+	 * Filename for the height map.
 	 */
 	public static final String HEIGHT_MAP_FILE = "heightmap_name";
 	
 	/**
-	 * Width of the height map
+	 * Width of the height map.
 	 */
 	public static final String HEIGHT_MAP_WIDTH = "heightmap_width";
 	
 	/**
-	 * Height of the height map
+	 * Height of the height map.
 	 */
 	public static final String HEIGHT_MAP_HEIGHT = "heightmap_height";
 
 	/**
-	 * The file that contains the scale of the height map
+	 * The file that contains the scale of the height map.
 	 */
 	public static final String HEIGHT_MAP_SCALE_FILE = "heightmap_scale_file";
 
@@ -231,7 +189,7 @@ public class RoadDesign {
 
 	/**
 	 * Starts the application. <p>
-	 * It fails when it could not find the properties file.
+	 * It fails when it can not find the properties file.
 	 * 
 	 * @param propertiesPath where the properties are saved
 	 * @throws IOException thrown when the properties files is missing
@@ -245,7 +203,7 @@ public class RoadDesign {
 			System.exit(1);
 		}
 
-		if(!Logging.init()){
+		if(!Logging.init()){ // logging did not initialize properly, displays a user prompt asking whether or not to continue
 			int userInput = JOptionPane.showConfirmDialog(null, 
 					"Logging did not start correctly. "+
 					"Do you want to continue?", 
@@ -254,7 +212,7 @@ public class RoadDesign {
 					JOptionPane.WARNING_MESSAGE);
 			
 			if(userInput!=JOptionPane.OK_OPTION){
-				System.exit(1);
+				System.exit(1); // application exits if user chooses to not continue without logging
 			}
 		}
 

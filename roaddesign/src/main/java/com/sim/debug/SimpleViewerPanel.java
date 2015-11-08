@@ -7,19 +7,13 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
-import java.awt.geom.Point2D;
-import java.util.*;
-
+import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
-import com.sim.central.RoadDesign;
 import com.sim.debug.components.DebugComponent;
-import com.sim.geometries.*;
+import com.sim.geometries.Vector23f;
 import com.sim.gui.ThreeDEnv;
-import com.sim.network.update.NetworkUpdate;
-import com.sim.network.update.RoadAddUpdate;
-import com.sim.network.update.RoadCloseUpdate;
 
 
 public class SimpleViewerPanel extends JPanel 

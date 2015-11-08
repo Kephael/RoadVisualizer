@@ -2,20 +2,17 @@ package com.sim.util;
 
 
 import java.awt.BasicStroke;
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Stroke;
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-import com.sim.core.basic.FlagUtil;
 import com.sim.core.basic.ModelGenConsts;
 import com.sim.geometries.RoadVector;
 import com.sim.geometries.Vector23f;
-import com.sim.gui.*;
+import com.sim.gui.ThreeDEnv;
 
 
 /**

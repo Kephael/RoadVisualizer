@@ -2,11 +2,8 @@ package com.sim.core.basic;
 
 
 import java.awt.Color;
-import java.util.ArrayList;
 
 import com.sim.geometries.RoadVector;
-import com.sim.geometries.Vector23f;
-import com.sim.obj.CrossSection;
 
 
 /**

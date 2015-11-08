@@ -1,7 +1,6 @@
 package com.sim.io.exporters;
 
 import java.io.FileNotFoundException;
-import java.io.OutputStream;
 
 import com.sim.network.RoadNetwork;
 

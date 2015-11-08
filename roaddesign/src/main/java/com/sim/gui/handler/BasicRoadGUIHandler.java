@@ -3,7 +3,6 @@ package com.sim.gui.handler;
 import java.awt.Graphics;
 
 import com.sim.gui.ViewMode;
-import com.sim.roads.*;
 import com.sim.roads.basic.BasicRoad;
 import com.sim.util.GraphicsUtil;
 

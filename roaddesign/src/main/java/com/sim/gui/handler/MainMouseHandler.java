@@ -1,24 +1,19 @@
 package com.sim.gui.handler;
 
 
-import java.awt.event.*;
-import java.awt.*;
-import java.util.Map;
-
-import javax.swing.JComponent;
-import javax.swing.JPanel;
+import java.awt.Point;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 import com.sim.central.Logging;
 import com.sim.central.RoadDesign;
-import com.sim.debug.Debug;
-import com.sim.geometries.RoadVector;
 import com.sim.geometries.Vector23f;
-import com.sim.network.RoadNetwork;
 import com.sim.network.update.NetworkUpdate;
-import com.sim.network.update.NetworkUpdateHandler;
 import com.sim.network.update.RoadAddUpdate;
 import com.sim.network.update.RoadCloseUpdate;
-import com.sim.roads.Road;
 
 
 /**
@@ -72,10 +67,10 @@ public class MainMouseHandler implements
 			
 			if(left){
 				Logging.getLogger().info(String.format(
-						"PT_ADD: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z));
+						"PT_ADD: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z)); // prints point add position to console
 				System.out.printf("(%d,%d)\n", e.getX(), e.getY());
 			}else{
-				Logging.getLogger().info(String.format(
+				Logging.getLogger().info(String.format( // prints point close position to console
 						"PT_CLOSE: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z));				
 			}
 			

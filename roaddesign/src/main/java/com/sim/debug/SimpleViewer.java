@@ -5,13 +5,11 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 import com.sim.debug.components.DebugComponent;
-import com.sim.geometries.Vector23f;
 
 
 public class SimpleViewer extends JDialog

@@ -1,16 +1,18 @@
 package com.sim.gui.handler;
 
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import javax.swing.*;
+import javax.swing.JComponent;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 import com.sim.central.Logging;
 import com.sim.central.ModelPathState;
 import com.sim.central.RoadDesign;
 import com.sim.gui.FrameComponents;
-import com.sim.util.ModelExporterUtils;
 
 /**
  * actionPerformed will be called when the user selects to click the save button
@@ -60,7 +62,7 @@ public class SaveHandler implements ActionListener{
 				if(state!=ModelPathState.EMPTY){
 					int userInput = RoadDesign.confirm(modelPath+
 							" is not empty!\n"+
-							"Do you want to override these files.", 
+							"Do you want to overwrite your existing road design?", 
 							"Saving model");
 					switch(userInput){
 					case JOptionPane.CANCEL_OPTION:
@@ -97,6 +99,5 @@ public class SaveHandler implements ActionListener{
 		}
 		return modelPath;
 	}
-	
-	
+		
 }

@@ -1,12 +1,6 @@
 package com.sim.network.update;
 
-import java.util.Map;
-
-import com.sim.geometries.RoadVector;
 import com.sim.geometries.Vector23f;
-import com.sim.network.RoadNetwork;
-import com.sim.obj.*;
-import com.sim.roads.*;
 
 /**
  * This update request is created when the user left-click on the application

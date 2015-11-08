@@ -1,6 +1,5 @@
 package com.sim.debug.components;
 
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.util.ArrayList;
 

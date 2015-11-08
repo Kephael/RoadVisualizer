@@ -1,13 +1,9 @@
 package com.sim.gui.handler;
 
 import java.awt.Color;
-
-
-
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-import com.sim.core.basic.ModelGenConsts;
 import com.sim.geometries.RoadVector;
 import com.sim.gui.ViewMode;
 import com.sim.intersections.basic.BasicIntersection;

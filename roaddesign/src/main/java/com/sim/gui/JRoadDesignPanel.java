@@ -1,28 +1,9 @@
 package com.sim.gui;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.Point2D;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.Timer;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
 
 import com.sim.central.RoadDesign;
-import com.sim.core.basic.DesignConsts;
-import com.sim.core.basic.FlagUtil;
-import com.sim.core.basic.ModelGenConsts;
-import com.sim.core.basic.RoadShapeCalc;
-import com.sim.curves.HorizontalCurve;
-import com.sim.curves.VerticalCurve;
-import com.sim.geometries.Geom3f;
-import com.sim.geometries.Plane3f;
-import com.sim.geometries.Ray3f;
-import com.sim.geometries.RoadVector;
-import com.sim.geometries.Vector23f;
-import com.sim.intersections.Intersection;
-import com.sim.intersections.basic.BasicIntersection;
-import com.sim.roads.Road;
-import com.sim.roads.basic.BasicRoad;
-import com.sim.util.GraphicsUtil;
 
 
 /**

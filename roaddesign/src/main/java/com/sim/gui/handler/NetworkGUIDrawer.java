@@ -1,20 +1,12 @@
 package com.sim.gui.handler;
 
-import java.awt.Color;
-
-
 import java.awt.Graphics;
-import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.sim.gui.ThreeDEnv;
 import com.sim.gui.ViewMode;
 import com.sim.intersections.Intersection;
 import com.sim.network.RoadNetwork;
 import com.sim.roads.Road;
-import com.sim.util.GraphicsUtil;
-
-import com.sim.core.basic.*;
 
 /**
  * This class is able to draw a road network in one of 

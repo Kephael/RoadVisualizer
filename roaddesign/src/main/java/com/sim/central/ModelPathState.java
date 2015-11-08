@@ -15,14 +15,14 @@ import java.util.Scanner;
  */
 public enum ModelPathState {
 	/**
-	 * The files in the model path is consistent. The renderer should be able to
+	 * The files in the model path are consistent. The renderer should be able to
 	 * render it. 
 	 * @see com.sim.renderer.AutoGenLoader
 	 */
 	OK, 
 	
 	/**
-	 * The files in the model path is not consistent. The renderer will not be able to
+	 * The files in the model path are not consistent. The renderer will not be able to
 	 * render it. 
 	 * @see com.sim.renderer.AutoGenLoader
 	 */
@@ -34,11 +34,11 @@ public enum ModelPathState {
 	EMPTY, 
 	
 	/**
-	 * The model path points to a non-existing directory.
+	 * The model path points to a non-existent directory.
 	 */
 	NON_EXIST;
 	
-	/**
+	/** 
 	 * Checks the state of the directory where the model is supposed to 
 	 * be saved.
 	 * <p>

@@ -2,11 +2,12 @@ package com.sim.central;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
+import java.util.EventListener;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JComponent;
 
 import com.sim.gui.FrameComponents;
 import com.sim.gui.ViewMode;
@@ -14,7 +15,6 @@ import com.sim.gui.handler.MainMouseHandler;
 import com.sim.gui.handler.RenderHandler;
 import com.sim.gui.handler.ResetHandler;
 import com.sim.gui.handler.SaveHandler;
-import com.sim.roads.RoadTypes;
 
 
 /**
@@ -65,7 +65,7 @@ public class ComponentHandlers {
 		_handlers.handlers.put(FrameComponents.TOOLBAR_VIEW_MODE_BOX, 
 			new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					JComboBox box = (JComboBox)e.getSource();
+					JComboBox<?> box = (JComboBox<?>)e.getSource();
 					RoadDesign.setViewMode(
 							(ViewMode) box.getSelectedItem());
 				}

@@ -1,33 +1,22 @@
 package com.sim.roads.basic;
 
-import java.awt.Container;
-
-
-
-import java.awt.Graphics;
-
-import java.util.*;
-
-import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.Set;
+import java.util.TreeMap;
 
 import com.sim.central.RoadDesign;
-import com.sim.core.basic.IntersectionCalcError;
-import com.sim.core.basic.RoadShapeCalc;
 import com.sim.curves.CurveParam;
-import com.sim.curves.HorizontalCurve;
-import com.sim.curves.VerticalCurve;
 import com.sim.geometries.RoadVector;
-import com.sim.geometries.Vector23f;
 import com.sim.gui.handler.BasicRoadGUIHandler;
-import com.sim.intersections.*;
+import com.sim.intersections.Intersection;
 import com.sim.intersections.basic.BasicLegType;
 import com.sim.io.exporters.basic.BasicRoadExporter;
 import com.sim.network.RoadNetwork;
 import com.sim.obj.CrossSection;
 import com.sim.roads.Road;
 import com.sim.util.CopyUtil;
-
-import com.sim.util.GraphicsUtil;
 import com.sim.util.SearchUtil;
 
 

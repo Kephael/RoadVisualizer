@@ -1,12 +1,19 @@
 package com.sim.gui;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.ArrayList;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import com.sim.central.RoadDesign;
 import com.sim.curves.CurveParam;

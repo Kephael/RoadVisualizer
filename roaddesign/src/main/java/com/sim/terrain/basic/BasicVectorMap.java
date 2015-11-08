@@ -1,13 +1,9 @@
 package com.sim.terrain.basic;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import com.sim.debug.DebugView;
-import com.sim.debug.components.DebugMesh;
-import com.sim.debug.components.DebugPolyLine;
 import com.sim.geometries.RoadVector;
 import com.sim.intersections.Intersection;
 import com.sim.intersections.basic.BasicIntersection;

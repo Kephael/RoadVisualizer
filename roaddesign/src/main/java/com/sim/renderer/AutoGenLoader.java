@@ -1,25 +1,16 @@
 package com.sim.renderer;
 
 
-import java.awt.Color;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
-import java.io.*;
-
-
-import java.net.URL;
-
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.zip.DataFormatException;
 
 import javax.imageio.ImageIO;
 
 import com.jme.app.BaseGame;
 import com.jme.app.SimpleGame;
-import com.jme.bounding.BoundingBox;
 import com.jme.image.Texture;
 import com.jme.input.FirstPersonHandler;
 import com.jme.input.InputHandler;
@@ -28,20 +19,16 @@ import com.jme.input.KeyInput;
 import com.jme.input.MouseInput;
 import com.jme.input.joystick.JoystickInput;
 import com.jme.light.PointLight;
-import com.jme.math.Vector2f;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Camera;
 import com.jme.renderer.ColorRGBA;
 import com.jme.scene.Node;
 import com.jme.scene.Skybox;
 import com.jme.scene.Spatial;
-import com.jme.scene.TexCoords;
+import com.jme.scene.Spatial.TextureCombineMode;
 import com.jme.scene.Text;
 import com.jme.scene.TriMesh;
-import com.jme.scene.Spatial.TextureCombineMode;
-import com.jme.scene.shape.Box;
 import com.jme.scene.state.BlendState;
-import com.jme.scene.state.CullState;
 import com.jme.scene.state.LightState;
 import com.jme.scene.state.TextureState;
 import com.jme.scene.state.WireframeState;
@@ -50,20 +37,16 @@ import com.jme.system.DisplaySystem;
 import com.jme.system.JmeException;
 import com.jme.util.TextureManager;
 import com.jme.util.Timer;
-import com.jme.util.geom.BufferUtils;
 import com.jme.util.geom.Debugger;
-import com.jme.util.resource.ResourceLocatorTool;
-import com.jme.util.resource.SimpleResourceLocator;
 import com.jmex.terrain.TerrainBlock;
 import com.jmex.terrain.util.ImageBasedHeightMap;
 import com.sim.central.RoadDesign;
 import com.sim.io.exporters.basic.BasicHeightMapExporter;
-import com.sim.util.CompareUtil;
 import com.sim.util.ModelImporter;
  
 /**
  * Started Date: Jul 29, 2004<br>
- * Revised Date: Jun 11, 2012<br>
+ * Revised Date: Nov 8, 2015<br>
  * <br>
  * 
  * Is used to demonstrate the inner workings of SimpleGame.
@@ -83,12 +66,9 @@ public class AutoGenLoader extends BaseGame {
 	public static final int YELLOW_MARKER = 4;
 	public static final int PAVEMENT = 5;
 	
-	private static final Logger logger = Logger.getLogger(AutoGenLoader.class
+	private static final Logger logger = Logger.getLogger(AutoGenLoader.class // this logger is used to log game activity and separate from the logger in the com.sim.central package
 			.getName());
  
-//	public static String MODEL_PATH="RoadModel\\model20";
-//	public static String MESH_FILE;
-	
 	public static void main(String[] args) throws IOException {
 		
 		AutoGenLoader app = new AutoGenLoader();
@@ -204,11 +184,6 @@ public class AutoGenLoader extends BaseGame {
 		cam.update();
 	}
 	
-//	private float preEle = Float.NaN;
-//	private int preRow = Integer.MAX_VALUE;
-//	private int preCol = Integer.MAX_VALUE;
-//	private static long counter = 0;
-	
 	/**
 	 * Given the camera's position in XY plane, finds its elevation in a height map.
 	 * 
@@ -260,38 +235,9 @@ public class AutoGenLoader extends BaseGame {
 		}
 		return ele;
 	}
-//		float alpha = 0.2f;
-//		if(!Float.isNaN(preEle))
-//			ele = ele*(1-alpha)+alpha*preEle;
-		
-//		float ele = (1-v)*((1-u)*eleBL+u*eleBR) + v*((1-u)*eleTL+u*eleTR);
-		
-//		if(counter%20==0){
-//			System.out.printf("x=%.3f, y=%.3f, col=%d, row=%d, BL=%.3f, BR=%.3f, TL=%.3f, TR=%.3f, u=%.3f, v=%.3f preEle =%.3f ele=%.3f\n",
-//					x, y, col, row, eleBL, eleBR, eleTL, eleTR, u, v, preEle, ele);			
-//			counter=0;
-//		}else{
-//			counter++;
-//		}
-		
-/*		
-		if(CompareUtil.floatCompare(ele-preEle, 0)){ 
-		//			row!=preRow || col!=preCol){
-			System.out.printf("x=%.3f, y=%.3f, col=%d, row=%d, BL=%.3f, BR=%.3f, TL=%.3f, TR=%.3f, u=%.3f, v=%.3f preEle =%.3f ele=%.3f\n",
-					x, y, col, row, eleBL, eleBR, eleTL, eleTR, u, v, preEle, ele);			
-		}
 
-		preRow = row;
-		preCol = col;
-		preEle = ele;
-		return ele;
-	}
-*/	
 	public void closeDisplaySystem(){
 		super.quit();
-//		if(!display.isClosing()){
-//			display.close();
-//		}
 	}
 	
 	/**
@@ -306,7 +252,6 @@ public class AutoGenLoader extends BaseGame {
 		display.getRenderer().clearBuffers();
 		/** Draw the rootNode and all its children. */
 		display.getRenderer().draw(rootNode);
-				
 		/**
 		 * If showing bounds, draw rootNode's bounds, and the bounds of all its
 		 * children.
@@ -316,7 +261,7 @@ public class AutoGenLoader extends BaseGame {
 		/** Draw the fps node to show the fancy information at the bottom. */
 		display.getRenderer().draw(fpsNode);
 		/** Call simpleRender() in any derived classes. */
-		simpleRender();
+		simpleRender();		
 	}
  
 	/** A sky box for our scene. */
@@ -361,8 +306,10 @@ public class AutoGenLoader extends BaseGame {
  
 		
 		/** set up the model IO (Written by Dahai Guo) **/
-//		AutoGenIO.display = display;
 		ModelImporter.display = display;
+		
+		/** enable Vsync to reduce CPU and GPU Utilization (3000 FPS is a waste of resources */
+		display.setVSyncEnabled(true);
 		
 		Vector3f [] camParams = new Vector3f[4];
 		camParams[0] = new Vector3f(); // loc
@@ -378,12 +325,6 @@ public class AutoGenLoader extends BaseGame {
 			heightMapRange = ModelImporter.loadHeightMapRange(modelPath);
 			heightMapRaster = (short[]) heightMap.getData().getDataElements(0, 0, 
 					heightMap.getWidth(), heightMap.getHeight(), null);
-			
-//			System.out.printf("The heightmap length is %d\n", heightMapRaster.length);
-//			System.out.printf("(256,256): %d\n", heightMapRaster[512*256+256]);
-//			System.out.printf("(257,256): %d\n", heightMapRaster[512*256+257]);
-//			System.out.printf("(256,257): %d\n", heightMapRaster[512*257+256]);
-//			System.out.printf("(257,257): %d\n", heightMapRaster[512*257+257]);
 			
 			BufferedImage im = ImageIO.read(new File("model//height.png")); 
 	        ImageBasedHeightMap ib=new ImageBasedHeightMap(im);
@@ -404,17 +345,13 @@ public class AutoGenLoader extends BaseGame {
 		}
 
 		sb = ModelImporter.setupSky();
-//		sb.setLocalTranslation(centroid.x, centroid.y, 0);
 		
 		/** Set up how our camera sees. */
-//		cam.setFrustumPerspective(45.0f, (float) display.getWidth()
-//				/ (float) display.getHeight(), 1, 1000);
 		cam.setFrustumPerspective(60.0f, (float) display.getWidth()
 		/ (float) display.getHeight(), 1, 5000);
 		
 		/** Move our camera to a correct place and orientation. */
 		cam.setFrame(camParams[0], camParams[1], camParams[2], camParams[3]);
-//		cam.setFrame(loc, left, up, dir);
 		/** Signal that we've changed our camera's location/frustum. */
 		cam.update();
 		/** Assign the camera to this renderer. */

@@ -1,22 +1,11 @@
 package com.sim.debug;
-import java.awt.Dimension;
-
-import java.awt.Toolkit;
-import java.util.*;
+import java.util.ArrayList;
 
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 
-import com.sim.central.RoadDesign;
 import com.sim.debug.components.DebugComponent;
-import com.sim.debug.components.DebugMesh;
 import com.sim.debug.components.DebugPolyLine;
 import com.sim.geometries.RoadVector;
-import com.sim.intersections.basic.BasicIntersection;
-import com.sim.network.RoadNetwork;
-import com.sim.roads.basic.BasicRoad;
-//import sim.basic.BasicOuterPath;
-//import sim.basic.BasicVectorMap;
 
 public class DebugView {
 	

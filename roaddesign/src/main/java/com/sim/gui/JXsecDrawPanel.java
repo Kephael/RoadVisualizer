@@ -1,15 +1,12 @@
 package com.sim.gui;
 
 import java.awt.BasicStroke;
-
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 
-import javax.swing.*;
+import javax.swing.JPanel;
 
-import com.sim.central.RoadDesign;
 import com.sim.obj.CrossSection;
 
 

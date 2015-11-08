@@ -1,9 +1,5 @@
 package com.sim.geometries;
 
-import java.awt.Color;
-
-import com.sim.curves.HorizontalCurve;
-import com.sim.curves.VerticalCurve;
 import com.sim.util.CompareUtil;
 import com.sim.util.Duplicatable;
 

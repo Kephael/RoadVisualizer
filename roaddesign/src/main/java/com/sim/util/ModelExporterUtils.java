@@ -1,25 +1,12 @@
 package com.sim.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.channels.FileChannel;
-import java.nio.channels.FileLock;
-import java.nio.channels.OverlappingFileLockException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Formatter;
-import java.util.Scanner;
 
-import com.sim.central.ModelPathState;
-import com.sim.central.RoadDesign;
 import com.sim.core.basic.DesignConsts;
 import com.sim.core.basic.ModelGenConsts;
 import com.sim.geometries.RoadVector;
-import com.sim.intersections.Intersection;
 import com.sim.obj.CrossSection;
-import com.sim.roads.basic.BasicRoad;
 
 
 public class ModelExporterUtils {

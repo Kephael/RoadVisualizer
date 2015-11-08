@@ -7,8 +7,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import com.sim.util.ModelExporterUtils;
-
 public class GeneralTest {
 	public static void main(String args[]) throws IOException{
 		BufferedImage im = ImageIO.read(new File("model\\height.bmp"));

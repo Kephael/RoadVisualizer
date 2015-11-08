@@ -1,11 +1,6 @@
 package com.sim.curves;
 
-import java.awt.Dimension;
-
-import java.awt.Toolkit;
-import java.util.*;
-
-import javax.swing.JFrame;
+import java.util.ArrayList;
 
 import com.sim.core.basic.ModelGenConsts;
 import com.sim.geometries.Vector23f;

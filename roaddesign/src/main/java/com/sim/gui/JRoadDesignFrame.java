@@ -3,28 +3,27 @@ package com.sim.gui;
 
 //import sim.basic.BasicOuterPath;
 //import sim.basic.BasicVectorMap;
-
-
-
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import javax.swing.*;
-import javax.swing.border.EtchedBorder;
 
-import com.sim.debug.DebugView;
-import com.sim.debug.components.DebugMesh;
-import com.sim.debug.components.DebugPolyLine;
-import com.sim.geometries.RoadVector;
-import com.sim.intersections.basic.BasicIntersection;
-import com.sim.network.RoadNetwork;
-import com.sim.roads.basic.BasicRoad;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JToolBar;
+import javax.swing.KeyStroke;
+import javax.swing.border.EtchedBorder;
 
 /**
  * This class arranges the graphical user interface for the entire application.

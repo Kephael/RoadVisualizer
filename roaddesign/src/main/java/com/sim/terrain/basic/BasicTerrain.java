@@ -3,16 +3,11 @@ package com.sim.terrain.basic;
 import java.util.ArrayList;
 
 import com.sim.central.RoadDesign;
-import com.sim.debug.DebugView;
-import com.sim.debug.components.DebugPolyLine;
 import com.sim.geometries.RoadVector;
 import com.sim.gui.handler.BasicTerrainGUIHandler;
-import com.sim.gui.handler.GUIHandler;
-import com.sim.gui.handler.NetworkGUIDrawer;
 import com.sim.io.exporters.basic.BasicTerrainExporter;
 import com.sim.network.RoadNetwork;
 import com.sim.terrain.Terrain;
-import com.sim.util.TriangulatorAdapter;
 
 
 

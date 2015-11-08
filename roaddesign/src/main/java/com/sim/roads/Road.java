@@ -1,7 +1,7 @@
 package com.sim.roads;
 
 import com.sim.geometries.RoadVector;
-import com.sim.gui.handler.*;
+import com.sim.gui.handler.GUIHandler;
 import com.sim.io.exporters.RoadExporter;
 import com.sim.network.RoadNetwork;
 import com.sim.roads.basic.BasicRoad;

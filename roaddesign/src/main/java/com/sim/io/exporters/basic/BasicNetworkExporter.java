@@ -1,24 +1,13 @@
 package com.sim.io.exporters.basic;
 
-import java.awt.Color;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Formatter;
 import java.util.Iterator;
 
-import javax.imageio.ImageIO;
-
-import com.jme.math.Triangle;
-import com.jme.math.Vector3f;
-import com.jme.scene.TriMesh;
 import com.sim.central.RoadDesign;
-import com.sim.geometries.Vector23f;
 import com.sim.intersections.Intersection;
-import com.sim.intersections.basic.BasicIntersection;
 import com.sim.io.exporters.IntersectionExporter;
 import com.sim.io.exporters.NetworkExporter;
 import com.sim.io.exporters.RoadExporter;
@@ -27,8 +16,6 @@ import com.sim.network.RoadNetwork;
 import com.sim.roads.Road;
 import com.sim.roads.basic.BasicRoad;
 import com.sim.util.ModelExporterUtils;
-import com.sim.util.ModelGenUtil;
-import com.sim.util.ModelImporter;
 
 
 public class BasicNetworkExporter extends NetworkExporter{

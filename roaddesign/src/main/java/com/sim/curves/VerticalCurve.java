@@ -1,6 +1,6 @@
 package com.sim.curves;
 
-import com.sim.geometries.*;
+import com.sim.geometries.RoadVector;
 
 /**
  * Encapsulates parameters for a vertical curve.
