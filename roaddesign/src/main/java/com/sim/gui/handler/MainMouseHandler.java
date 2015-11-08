@@ -67,10 +67,10 @@ public class MainMouseHandler implements
 			
 			if(left){
 				Logging.getLogger().info(String.format(
-						"PT_ADD: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z)); // prints point add position to console
-				System.out.printf("(%d,%d)\n", e.getX(), e.getY());
-			}else{
-				Logging.getLogger().info(String.format( // prints point close position to console
+						"PT_ADD: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z)); // outputs point add position to file and console
+				System.out.printf("(%d,%d)\n", e.getX(), e.getY());// outputs mouse click position to console
+				}else{
+				Logging.getLogger().info(String.format( // outputs point close position to file and console
 						"PT_CLOSE: (%.3f, %.3f, %.3f)",	v.x,v.y, v.z));				
 			}
 			
